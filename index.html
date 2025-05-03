@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Mobile Website</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <!-- jQuery & jQuery Mobile CDN -->
+  <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+  <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+  <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+  <!-- Custom CSS for colors -->
+  <style>
+    body {
+      background-color: #f0f8ff; /* Light blue */
+    }
+    .ui-header {
+      background-color: #4CAF50 !important; /* Green */
+      color: white !important;
+      text-align: center;
+    }
+    .ui-footer {
+      background-color: #333 !important;
+      color: #fff !important;
+      text-align: center;
+    }
+    .custom-btn {
+      background-color: #FF9800 !important; /* Orange */
+      color: white !important;
+      font-weight: bold;
+    }
+    #message {
+      color: #d32f2f;
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- Home Page -->
+<div data-role="page" id="home">
+  <div data-role="header">
+    <h1>Welcome</h1>
+  </div>
+
+  <div data-role="content">
+    <p>This is a simple mobile website using jQuery Mobile.</p>
+    
+    <!-- jQuery button and output message -->
+    <button id="clickMe" class="ui-btn custom-btn ui-corner-all">Click Me</button>
+    <p id="message"></p>
+    
+    <a href="#about" class="ui-btn ui-corner-all" style="background-color:#03A9F4; color:white;">About Us</a>
+  </div>
+
+  <div data-role="footer" data-position="fixed">
+    <h4>&copy; 2025 My Mobile Site</h4>
+  </div>
+</div>
+
+<!-- About Page -->
+<div data-role="page" id="about">
+  <div data-role="header">
+    <h1>About Us</h1>
+  </div>
+
+  <div data-role="content">
+    <p>This site is built with jQuery Mobile to demonstrate a responsive layout.</p>
+    <a href="#home" class="ui-btn ui-corner-all" style="background-color:#e91e63; color:white;">Back to Home</a>
+  </div>
+
+  <div data-role="footer" data-position="fixed">
+    <h4>Thanks for visiting!</h4>
+  </div>
+</div>
+
+<!-- jQuery interaction -->
+<script>
+  $(document).on('pagecreate', '#home', function() {
+    $('#clickMe').click(function() {
+      $('#message').text("You clicked the button!");
+    });
+  });
+</script>
+
+</body>
+</html>
