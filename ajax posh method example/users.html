@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Registered Users</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background: linear-gradient(to right, #f6d365, #fda085);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 40px;
+    }
+
+    .user-card {
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      margin-bottom: 20px;
+    }
+
+    .card-body p {
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h2 class="text-center mb-4 text-white">Registered Users</h2>
+    <div id="userList" class="row justify-content-center"></div>
+  </div>
+
+  <script>
+    const users = JSON.parse(localStorage.getItem('users')) || [];
+    const userList = document.getElementById('userList');
+
+    if (users.length === 0) {
+      userList.innerHTML = '<p class="text-center text-white">No users registered.</p>';
+    } else {
+      users.forEach(user => {
+        const col = document.createElement('div');
+        col.className = 'col-md-6 col-lg-4';
+        col.innerHTML = `
+          <div class="card user-card bg-light">
+            <div class="card-body">
+              <h5 class="card-title">${user.name}</h5>
+              <p class="card-text"><strong>Email:</strong> ${user.email}</p>
+            </div>
+          </div>
+        `;
+        userList.appendChild(col);
+      });
+    }
+  </script>
+
+</body>
+</html>
