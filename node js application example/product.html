@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Our Products</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #fff;
+      padding: 20px;
+    }
+
+    nav {
+      background-color: #333;
+      padding: 10px;
+      text-align: center;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    h1 {
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    .products-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      margin-top: 40px;
+    }
+
+    .product-card {
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      padding: 15px;
+      width: 250px;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.2s;
+    }
+
+    .product-card:hover {
+      transform: scale(1.03);
+    }
+
+    .product-card img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+
+    .product-name {
+      font-size: 18px;
+      font-weight: bold;
+      margin: 10px 0;
+    }
+
+    .product-price {
+      color: green;
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+
+    .buy-btn {
+      background-color: #28a745;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+
+    .buy-btn:hover {
+      background-color: #218838;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="nodeapplicationexample.html">Home</a>
+    <a href="product.html">Products</a>
+    <a href="about_us.html">About Us</a>
+    <a href="logout.html">Logout</a>
+  </nav>
+
+  <h1>Our Products</h1>
+
+  <div class="products-container">
+    <!-- Product 1 -->
+    <div class="product-card">
+      <img src="images/product1.jpg" alt="Product 1">
+      <div class="product-name">Wireless Headphones</div>
+      <div class="product-price">₹500</div>
+      <button class="buy-btn">Buy Now</button>
+    </div>
+
+    <!-- Product 2 -->
+    <div class="product-card">
+      <img src="images/product2.jpg" alt="Product 2">
+      <div class="product-name">Smart Watch</div>
+      <div class="product-price">₹750</div>
+      <button class="buy-btn">Buy Now</button>
+    </div>
+
+    <!-- Product 3 -->
+    <div class="product-card">
+      <img src="images/product3.jpg" alt="Product 3">
+      <div class="product-name">Bluetooth Speaker</div>
+      <div class="product-price">₹1,200</div>
+      <button class="buy-btn">Buy Now</button>
+    </div>
+  </div>
+
+</body>
+</html>
